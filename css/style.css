@@ -355,22 +355,19 @@ nav {
 .partners-section { background:#fff; padding:50px 20px; }
 .partners-section h3 { text-align:center; font-size:22px; font-weight:700; color:#1a3a6b; margin-bottom:30px; }
 .partners-track-outer { overflow:hidden; }
-.partners-track { display:flex; gap:24px; animation:scrollPartners 20s linear infinite; width:max-content; }
+.partners-track { display:flex; gap:12px; animation:scrollPartners 20s linear infinite; width:max-content; }
 @keyframes scrollPartners { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
 .partner-logo {
-  background:#f7f9fc;
-  border:1px solid #e8ecf5;
+  background:transparent;
+  border:none;
   border-radius:10px;
-  width:220px;
-  height:110px;
+  width:180px;
+  height:120px;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-shrink:0;
-  font-size:13px;
-  font-weight:600;
-  color:#1a3a6b;
-  padding:14px;
+  padding:8px;
   text-align:center;
   overflow:hidden;
 }

@@ -361,8 +361,8 @@ nav {
   background:#f7f9fc;
   border:1px solid #e8ecf5;
   border-radius:10px;
-  width:160px;
-  height:80px;
+  width:220px;
+  height:110px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -370,7 +370,7 @@ nav {
   font-size:13px;
   font-weight:600;
   color:#1a3a6b;
-  padding:10px;
+  padding:14px;
   text-align:center;
   overflow:hidden;
 }

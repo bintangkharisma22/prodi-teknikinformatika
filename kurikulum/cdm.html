@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurikulum Computerized Design & Multimedia - Teknik Informatika Global Institute</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  .page-header {
+    background: linear-gradient(135deg, #1a3a6b 0%, #0b1f4a 100%);
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../img/banner-ftik.png') center/cover no-repeat;
+    opacity: 0.08;
+  }
+  .page-header .breadcrumb {
+    position: relative;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 14px;
+  }
+  .page-header .breadcrumb a { color: #ffc107; text-decoration: none; }
+  .page-header .breadcrumb a:hover { text-decoration: underline; }
+  .page-header .badge-konsentrasi {
+    position: relative;
+    display: inline-block;
+    background: rgba(255,193,7,0.18);
+    border: 1px solid rgba(255,193,7,0.5);
+    color: #ffc107;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 16px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+  }
+  .page-header h1 {
+    position: relative;
+    font-size: clamp(26px, 4vw, 42px);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .page-header h1 span { color: #ffc107; }
+  .page-header p {
+    position: relative;
+    font-size: 15px;
+    color: rgba(255,255,255,0.68);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid #e8ecf5;
+  }
+  .stat-item {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    padding: 22px 10px;
+    border-right: 1px solid #e8ecf5;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-size: 28px; font-weight: 800; color: #1a3a6b; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 3px; }
+
+  .curriculum-section { padding: 60px 20px; }
+  .curriculum-section.alt { background: #f7f9fc; }
+
+  .section-title-inline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  .section-title-inline .icon-wrap {
+    width: 48px; height: 48px; min-width: 48px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .icon-wrap.blue { background: linear-gradient(135deg,#1a3a6b,#2a5298); }
+  .icon-wrap.red  { background: linear-gradient(135deg,#e02020,#a01010); }
+  .icon-wrap.gold { background: linear-gradient(135deg,#f59e0b,#d97706); }
+  .section-title-inline .icon-wrap i { font-size: 20px; color: #fff; }
+  .section-title-inline h2 { font-size: clamp(20px,3vw,26px); font-weight: 800; color: #1a3a6b; margin: 0; }
+  .section-title-inline h2 span { color: #e02020; }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .course-card {
+    background: #fff;
+    border: 1px solid #e8ecf5;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.25s;
+  }
+  .course-card:hover {
+    box-shadow: 0 4px 16px rgba(26,58,107,0.12);
+    transform: translateY(-2px);
+    border-color: #c9d5ee;
+  }
+  .course-num {
+    width: 30px; height: 30px; min-width: 30px;
+    border-radius: 8px;
+    background: #f0f4ff;
+    color: #1a3a6b;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .course-card.konsentrasi .course-num {
+    background: rgba(224,32,32,0.08);
+    color: #e02020;
+  }
+  .course-name { font-size: 13px; font-weight: 600; color: #333; line-height: 1.4; }
+
+  .competency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .competency-card {
+    background: #fff;
+    border: 1px solid #e8ecf5;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .competency-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1a3a6b, #e02020);
+  }
+  .competency-card:hover { box-shadow: 0 8px 28px rgba(26,58,107,0.14); transform: translateY(-4px); }
+  .competency-card .comp-num {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1a3a6b, #2a5298);
+    color: #fff;
+    font-size: 18px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+  }
+  .competency-card h4 { font-size: 14px; font-weight: 700; color: #1a3a6b; line-height: 1.4; }
+
+  .back-btn-wrap { padding: 24px 20px 0; max-width: 1200px; margin: 0 auto; }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: #1a3a6b;
+    text-decoration: none; padding: 8px 16px;
+    border: 1.5px solid #c9d5ee; border-radius: 8px; transition: all 0.2s;
+  }
+  .back-btn:hover { background: #f0f4ff; border-color: #1a3a6b; }
+
+  @media (max-width: 992px) {
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
+    .competency-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-row { flex-wrap: wrap; }
+  }
+  @media (max-width: 600px) {
+    .course-grid { grid-template-columns: 1fr; }
+    .competency-grid { grid-template-columns: 1fr; }
+    .stat-item { max-width: 50%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  Selamat datang di website resmi Prodi Teknik Informatika Global Insitute
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-container">
+    <a href="../index.html" class="nav-logo">
+      <img src="../img/logo-global.jpeg" alt="Global Institute">
+      <div class="nav-logo-text">
+        <div class="prodi-name">Teknik Informatika</div>
+        <div class="faculty-name">FTIK &mdash; Global Institute</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#hero">Home</a></li>
+      <li><a href="../index.html#vmts">VMTS</a></li>
+      <li><a href="../index.html#profil">Profile</a></li>
+      <li><a href="../index.html#faq">FAQ</a></li>
+      <li><a href="../index.html#dosen">Dosen</a></li>
+      <li><a href="../index.html#prospek">Career</a></li>
+      <li class="dropdown">
+        <a href="#">Konsentrasi &#9662;</a>
+        <div class="dropdown-menu">
+          <a href="se.html">Software Engineering</a>
+          <a href="iotn.html">Internet of Things &amp; Networking</a>
+          <a href="cdm.html">Computerized Design &amp; Multimedia</a>
+        </div>
+      </li>
+      <li><a href="../index.html#kontak" class="nav-cta-btn">Daftar Sekarang</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="../index.html#hero" onclick="closeMob()">Home</a></li>
+      <li><a href="../index.html#vmts" onclick="closeMob()">VMTS</a></li>
+      <li><a href="../index.html#profil" onclick="closeMob()">Profile</a></li>
+      <li><a href="../index.html#faq" onclick="closeMob()">FAQ</a></li>
+      <li><a href="../index.html#dosen" onclick="closeMob()">Dosen</a></li>
+      <li><a href="../index.html#prospek" onclick="closeMob()">Career</a></li>
+      <li><a href="se.html" onclick="closeMob()">Software Engineering</a></li>
+      <li><a href="iotn.html" onclick="closeMob()">IoT &amp; Networking</a></li>
+      <li><a href="cdm.html" onclick="closeMob()">Computerized Design</a></li>
+      <li><a href="../index.html#kontak" onclick="closeMob()">Daftar Sekarang</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &rsaquo; <a href="../index.html#konsentrasi">Konsentrasi</a> &rsaquo; Computerized Design &amp; Multimedia
+  </div>
+  <div class="badge-konsentrasi">Konsentrasi</div>
+  <h1>Computerized Design <span>&amp; Multimedia</span></h1>
+  <p>Kurikulum berbasis industri kreatif yang membekali mahasiswa dengan kemampuan desain grafis komputer, animasi digital, produksi multimedia, dan game development secara profesional.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat-item">
+    <div class="stat-num">31</div>
+    <div class="stat-label">Matakuliah Umum</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" style="color:#e02020">21</div>
+    <div class="stat-label">Matakuliah Konsentrasi</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" style="color:#f59e0b">6</div>
+    <div class="stat-label">Kompetensi Lulusan</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">8 <span style="font-size:16px;color:#888">Sem</span></div>
+    <div class="stat-label">Masa Studi Normal</div>
+  </div>
+</div>
+
+<div class="back-btn-wrap">
+  <a href="../index.html#konsentrasi" class="back-btn">
+    <i class="fas fa-arrow-left"></i> Kembali ke Konsentrasi
+  </a>
+</div>
+
+<!-- SECTION 1: MATAKULIAH UMUM -->
+<section class="curriculum-section">
+  <div class="container">
+    <div class="section-title-inline">
+      <div class="icon-wrap blue"><i class="fas fa-book-open"></i></div>
+      <h2>Daftar Matakuliah <span>Umum</span></h2>
+    </div>
+    <div class="course-grid">
+      <div class="course-card"><div class="course-num">1</div><div class="course-name">Logika &amp; Algoritma Pemrograman</div></div>
+      <div class="course-card"><div class="course-num">2</div><div class="course-name">Pengantar Teknologi Informasi</div></div>
+      <div class="course-card"><div class="course-num">3</div><div class="course-name">Pengantar Manajemen</div></div>
+      <div class="course-card"><div class="course-num">4</div><div class="course-name">Otomasi Perkantoran</div></div>
+      <div class="course-card"><div class="course-num">5</div><div class="course-name">Pendidikan Agama</div></div>
+      <div class="course-card"><div class="course-num">6</div><div class="course-name">Bahasa Inggris I</div></div>
+      <div class="course-card"><div class="course-num">7</div><div class="course-name">Pengantar Sistem Basis Data</div></div>
+      <div class="course-card"><div class="course-num">8</div><div class="course-name">Aljabar Linear</div></div>
+      <div class="course-card"><div class="course-num">9</div><div class="course-name">Bahasa Inggris II</div></div>
+      <div class="course-card"><div class="course-num">10</div><div class="course-name">Perancangan Web</div></div>
+      <div class="course-card"><div class="course-num">11</div><div class="course-name">Pengantar Jaringan Komputer</div></div>
+      <div class="course-card"><div class="course-num">12</div><div class="course-name">Pengolahan Basis Data</div></div>
+      <div class="course-card"><div class="course-num">13</div><div class="course-name">Bahasa Inggris III</div></div>
+      <div class="course-card"><div class="course-num">14</div><div class="course-name">Kalkulus</div></div>
+      <div class="course-card"><div class="course-num">15</div><div class="course-name">Bahasa Indonesia</div></div>
+      <div class="course-card"><div class="course-num">16</div><div class="course-name">Sistem Operasi</div></div>
+      <div class="course-card"><div class="course-num">17</div><div class="course-name">Sistem Informasi Manajemen</div></div>
+      <div class="course-card"><div class="course-num">18</div><div class="course-name">Bahasa Inggris IV</div></div>
+      <div class="course-card"><div class="course-num">19</div><div class="course-name">Kecakapan Antar Personal</div></div>
+      <div class="course-card"><div class="course-num">20</div><div class="course-name">Kepemimpinan</div></div>
+      <div class="course-card"><div class="course-num">21</div><div class="course-name">Analisis dan Perancangan SI</div></div>
+      <div class="course-card"><div class="course-num">22</div><div class="course-name">Pancasila &amp; Kewarganegaraan</div></div>
+      <div class="course-card"><div class="course-num">23</div><div class="course-name">Technopreneur</div></div>
+      <div class="course-card"><div class="course-num">24</div><div class="course-name">Etika Profesi</div></div>
+      <div class="course-card"><div class="course-num">25</div><div class="course-name">Technopreneur 2</div></div>
+      <div class="course-card"><div class="course-num">26</div><div class="course-name">Manajemen Proyek</div></div>
+      <div class="course-card"><div class="course-num">27</div><div class="course-name">Metode Riset Dan Penelitian</div></div>
+      <div class="course-card"><div class="course-num">28</div><div class="course-name">Seminar</div></div>
+      <div class="course-card"><div class="course-num">29</div><div class="course-name">KKP / KKN</div></div>
+      <div class="course-card"><div class="course-num">30</div><div class="course-name">Skripsi</div></div>
+      <div class="course-card"><div class="course-num">31</div><div class="course-name">Jurnal</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: MATAKULIAH KONSENTRASI -->
+<section class="curriculum-section alt">
+  <div class="container">
+    <div class="section-title-inline">
+      <div class="icon-wrap red"><i class="fas fa-paint-brush"></i></div>
+      <h2>Daftar Matakuliah <span>Konsentrasi</span></h2>
+    </div>
+    <div class="course-grid">
+      <div class="course-card konsentrasi"><div class="course-num">1</div><div class="course-name">Konsep Multimedia</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">2</div><div class="course-name">Desain Grafis 1</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">3</div><div class="course-name">Project 1</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">4</div><div class="course-name">Photography</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">5</div><div class="course-name">Desain Grafis 2</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">6</div><div class="course-name">2D Animasi I</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">7</div><div class="course-name">Metode Numerik</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">8</div><div class="course-name">Project 2</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">9</div><div class="course-name">2D Animasi II</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">10</div><div class="course-name">Cartoon &amp; Ilustration 1</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">11</div><div class="course-name">Typografi</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">12</div><div class="course-name">3D Animasi I</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">13</div><div class="course-name">Cartoon &amp; Ilustration 2</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">14</div><div class="course-name">Computer Aided Design</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">15</div><div class="course-name">Game 2D &amp; 3D</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">16</div><div class="course-name">Aplikasi Multimedia Interaktif</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">17</div><div class="course-name">Sistem Multimedia</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">18</div><div class="course-name">Pemrograman Multimedia</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">19</div><div class="course-name">Project 3</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">20</div><div class="course-name">Desain Periklanan</div></div>
+      <div class="course-card konsentrasi"><div class="course-num">21</div><div class="course-name">3D Animasi II</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: KOMPETENSI LULUSAN -->
+<section class="curriculum-section">
+  <div class="container">
+    <div class="section-title-inline">
+      <div class="icon-wrap gold"><i class="fas fa-user-graduate"></i></div>
+      <h2>Kompetensi Lulusan <span>Menjadi Seorang</span></h2>
+    </div>
+    <div class="competency-grid">
+      <div class="competency-card">
+        <div class="comp-num">1</div>
+        <h4>Web Desain &amp; Multimedia Digital</h4>
+      </div>
+      <div class="competency-card">
+        <div class="comp-num">2</div>
+        <h4>Desain Grafis</h4>
+      </div>
+      <div class="competency-card">
+        <div class="comp-num">3</div>
+        <h4>Animator &amp; Cartoon Specialist</h4>
+      </div>
+      <div class="competency-card">
+        <div class="comp-num">4</div>
+        <h4>Programer Multimedia</h4>
+      </div>
+      <div class="competency-card">
+        <div class="comp-num">5</div>
+        <h4>Photography &amp; Video Editor</h4>
+      </div>
+      <div class="competency-card">
+        <div class="comp-num">6</div>
+        <h4>Game 2D &amp; 3D Specialist</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="../img/logo-global.jpeg" alt="Global Institute">
+      <p>Program Studi Teknik Informatika FTIK Global Institute berkomitmen mencetak lulusan profesional di bidang teknologi informasi yang berdaya saing global.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Need Help?</h5>
+      <ul>
+        <li><a href="#">Marketing Division</a></li>
+        <li><a href="#">Presenter Team</a></li>
+        <li><a href="#">Lecturer Staff</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="../index.html#kontak">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Konsentrasi</h5>
+      <ul>
+        <li><a href="se.html">Software Engineering</a></li>
+        <li><a href="iotn.html">Internet of Things &amp; Networking</a></li>
+        <li><a href="cdm.html">Computerized Design &amp; Multimedia</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <div class="footer-address">
+        Jl. Aria Santika No. 43 A RT 003 RW 03,<br>
+        Margasari, Karawaci,<br>
+        Kota Tangerang, Banten 15114
+      </div>
+      <div class="footer-address">
+        <a href="mailto:kampus@global.ac.id">kampus@global.ac.id</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Teknik Informatika &mdash; FTIK Global Institute. All rights reserved.</span>
+    <span>Global Institute of Technology &amp; Business &mdash; <span>Think Smartly &amp; Globally</span></span>
+  </div>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+function closeMob() { mobileNav.classList.remove('open'); }
+</script>
+</body>
+</html>

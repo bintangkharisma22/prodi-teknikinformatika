@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teknik Informatika - FTIK Global Institute</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  Selamat datang di website resmi Prodi Teknik Informatika Global Insitute
+</div>
+
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-container">
+    <a href="#" class="nav-logo">
+      <img src="img/logo-global.jpeg" alt="Global Institute">
+      <div class="nav-logo-text">
+        <div class="prodi-name">Teknik Informatika</div>
+        <div class="faculty-name">FTIK &mdash; Global Institute</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#vmts">VMTS</a></li>
+      <li><a href="#profil">Profile</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#dosen">Dosen</a></li>
+      <li><a href="#prospek">Career</a></li>
+      <li class="dropdown">
+        <a href="#">Konsentrasi &#9662;</a>
+        <div class="dropdown-menu">
+          <a href="#">Software Engineering</a>
+          <a href="#">Internet of Things &amp; Networking</a>
+          <a href="#">Computerized Design &amp; Multimedia</a>
+        </div>
+      </li>
+      <li><a href="#kontak" class="nav-cta-btn">Daftar Sekarang</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#hero" onclick="closeMob()">Home</a></li>
+      <li><a href="#vmts" onclick="closeMob()">VMTS</a></li>
+      <li><a href="#profil" onclick="closeMob()">Profile</a></li>
+      <li><a href="#faq" onclick="closeMob()">FAQ</a></li>
+      <li><a href="#dosen" onclick="closeMob()">Dosen</a></li>
+      <li><a href="#prospek" onclick="closeMob()">Career</a></li>
+      <li><a href="#konsentrasi" onclick="closeMob()">Konsentrasi</a></li>
+      <li><a href="#kontak" onclick="closeMob()">Daftar Sekarang</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="label">Program Studi S1 &mdash; Terakreditasi BAN-PT</div>
+      <h1>Teknik<br><span>Informatika</span><br>Global Institute</h1>
+      <p>Mencetak profesional teknologi informasi yang kompeten, inovatif, dan berdaya saing global. Siap menghadapi era digital dengan kurikulum berbasis industri dan pembelajaran berbasis proyek nyata.</p>
+      <div class="hero-btns">
+        <a href="#daftar" class="btn-red">Daftar Sekarang</a>
+        <a href="#profil" class="btn-outline-white">Lihat Profile Prodi</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/banner-ftik.png" alt="FTIK Teknik Informatika">
+    </div>
+  </div>
+</section>
+
+<!-- AKREDITASI STRIP -->
+<div class="accred-strip">
+  <div class="accred-inner">
+    <div class="accred-item">
+      <div class="accred-num">1</div>
+      <div class="accred-text">
+        <strong>SK Akreditasi FTIK</strong>
+        <span>No SK : 3243/SK/BAN-PT/Ak-PPJ/S/V/2021<br>Badan Akreditasi Nasional - Perguruan Tinggi</span>
+      </div>
+    </div>
+    <div class="accred-item">
+      <div class="accred-num">2</div>
+      <div class="accred-text">
+        <strong>Peringkat Akreditasi Global Institute</strong>
+        <span>Global Institute of Technology &amp; Business : B<br>Badan Akreditasi Nasional - Perguruan Tinggi</span>
+      </div>
+    </div>
+    <div class="accred-item">
+      <div class="accred-num">3</div>
+      <div class="accred-text">
+        <strong>Akreditasi Prodi Teknik Informatika</strong>
+        <span>Akreditasi Prodi Teknik Informatika : <strong style="color:#ffc107">Baik</strong><br>Badan Akreditasi Nasional - Perguruan Tinggi</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFIL -->
+<section class="section" id="profil">
+  <div class="container">
+    <div class="section-header">
+      <h2>Profile <span>Program Studi</span></h2>
+      <div class="divider"></div>
+      <p>Program Studi Teknik Informatika di Global Institute dirancang untuk mencetak sarjana yang tidak hanya menguasai fondasi teoritis ilmu komputasi, tetapi juga mahir dalam praktik rekayasa perangkat lunak, sistem jaringan, dan desain multimedia. Kami mengintegrasikan teknologi terkini dengan wawasan technopreneurship untuk menghasilkan lulusan yang siap memecahkan masalah kompleks, berinovasi, dan menjadi pemimpin di era disrupsi digital dan industri 4.0.</p>
+    </div>
+    <div class="why-grid" id="vmts">
+      <img src="img/banner-ftik.png" alt="Tentang FTIK Teknik Informatika">
+      <div class="why-items">
+        <div class="why-item">
+          <h4>Visi</h4>
+          <p>Menjadi program studi yang unggul dibidang Software Engineering, Networking dan Multimedia pada tingkat regional dan global pada Tahun 2032 dengan Moral dan Etika.</p>
+        </div>
+        <div class="why-item">
+          <h4>Misi</h4>
+          <p>Menyelenggarakan pendidikan Teknik Informatika berkualitas berbasis industri, mendorong penelitian terapan, serta membangun kemitraan strategis dengan perusahaan teknologi untuk memperluas peluang kerja lulusan.</p>
+        </div>
+        <div class="why-item">
+          <h4>Tujuan</h4>
+          <p>Menghasilkan sarjana Teknik Informatika yang kompeten dalam rekayasa perangkat lunak, kecerdasan buatan, keamanan siber, serta mampu berwirausaha di bidang teknologi informasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN WITH US -->
+<section class="join-section">
+  <div class="join-inner">
+    <div class="join-title">
+      <span>Join With Us</span>
+      <h2>Alasan Kuliah di<br><em>Teknik Informatika Global Institute</em></h2>
+    </div>
+    <p class="join-subtitle">Berbagai keunggulan yang akan kamu dapatkan selama kuliah di Program Studi Teknik Informatika FTIK Global Institute.</p>
+    <div class="join-blocks">
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-briefcase"></i></div>
+        <h4>Peluang Kerja Luas</h4>
+        <p>Lulusan Teknik Informatika sangat dibutuhkan oleh hampir semua sektor industri. Dari startup teknologi hingga perusahaan multinasional, gelar Teknik Informatika membuka pintu karir yang sangat beragam dan kompetitif.</p>
+      </div>
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-user-graduate"></i></div>
+        <h4>Perspektif Lulusan</h4>
+        <p>Lulusan Teknik Informatika memiliki kemampuan analitis, pemrograman, dan problem-solving yang tinggi. Mereka mampu bekerja sebagai software engineer, data scientist, AI specialist, hingga tech entrepreneur.</p>
+      </div>
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-chart-line"></i></div>
+        <h4>Prospek Karir Cerah</h4>
+        <p>Bidang teknologi informasi adalah salah satu sektor dengan pertumbuhan tercepat. Profesi di bidang IT seperti software developer, cybersecurity analyst, dan data engineer masuk dalam daftar pekerjaan paling diminati secara global.</p>
+      </div>
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-flask"></i></div>
+        <h4>Keilmuan yang Relevan &amp; Adaptif</h4>
+        <p>Kurikulum Teknik Informatika dirancang bersama mitra industri dan diperbarui secara berkala, mencakup pemrograman, kecerdasan buatan, cloud computing, keamanan siber, dan pengembangan sistem berbasis data.</p>
+      </div>
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-clock"></i></div>
+        <h4>Waktu Tempuh Kuliah Singkat</h4>
+        <p>Kuliah dapat diselesaikan dalam 7 semester (3,5 tahun) bagi mahasiswa yang aktif dan berprestasi. Biaya kuliah kompetitif dengan berbagai pilihan beasiswa dan skema cicilan yang fleksibel.</p>
+      </div>
+      <div class="join-block">
+        <div class="join-block-icon"><i class="fas fa-laptop-code"></i></div>
+        <h4>Pembelajaran Berbasis Proyek</h4>
+        <p>Sistem pembelajaran berbasis project-based learning memastikan mahasiswa tidak hanya memahami teori, tetapi langsung mengerjakan proyek nyata bersama industri untuk membangun portofolio profesional sejak dini.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSPEK KERJA -->
+<section class="prospek-section section" id="prospek">
+  <div class="container">
+    <div class="section-header">
+      <h2>Prospek <span>Karir Lulusan</span></h2>
+      <div class="divider"></div>
+      <p>Lulusan Teknik Informatika Global Institute dipersiapkan untuk mengisi berbagai posisi strategis di industri teknologi dalam dan luar negeri.</p>
+    </div>
+    <div class="prospek-grid">
+      <div class="prospek-card">
+        <i class="fas fa-code"></i>
+        <h5>Software Developer</h5>
+        <p>Merancang dan mengembangkan aplikasi web, mobile, dan desktop untuk kebutuhan industri.</p>
+      </div>
+      <div class="prospek-card">
+        <i class="fas fa-brain"></i>
+        <h5>AI &amp; Machine Learning Engineer</h5>
+        <p>Membangun sistem kecerdasan buatan dan model machine learning untuk berbagai domain.</p>
+      </div>
+      <div class="prospek-card">
+        <i class="fas fa-shield-alt"></i>
+        <h5>Cybersecurity Analyst</h5>
+        <p>Melindungi sistem dan data perusahaan dari ancaman siber yang semakin kompleks.</p>
+      </div>
+      <div class="prospek-card">
+        <i class="fas fa-database"></i>
+        <h5>Data Engineer / Scientist</h5>
+        <p>Mengolah dan menganalisis big data untuk menghasilkan insight bisnis yang bernilai tinggi.</p>
+      </div>
+      <div class="prospek-card">
+        <i class="fas fa-cloud"></i>
+        <h5>Cloud &amp; DevOps Engineer</h5>
+        <p>Mengelola infrastruktur cloud dan pipeline CI/CD untuk kebutuhan pengembangan sistem modern.</p>
+      </div>
+      <div class="prospek-card">
+        <i class="fas fa-network-wired"></i>
+        <h5>Network Engineer</h5>
+        <p>Merancang, membangun, dan mengelola infrastruktur jaringan komputer skala enterprise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONSENTRASI -->
+<section class="section section-alt" id="konsentrasi">
+  <div class="container">
+    <div class="section-header">
+      <h2>Konsentrasi / <span>Peminatan</span></h2>
+      <div class="divider"></div>
+      <p>Program Studi Teknik Informatika menawarkan tiga konsentrasi yang dirancang sesuai kebutuhan industri teknologi terkini.</p>
+    </div>
+    <div class="konsentrasi-grid">
+      <div class="konsentrasi-card">
+        <div class="konsentrasi-top">
+          <i class="fas fa-laptop-code"></i>
+          <h4>Rekayasa Perangkat Lunak</h4>
+        </div>
+        <div class="konsentrasi-body">
+          <p>Konsentrasi ini membekali mahasiswa dengan kemampuan pengembangan aplikasi mulai dari perancangan arsitektur sistem, pemrograman frontend dan backend, pengujian perangkat lunak, hingga deployment sistem secara profesional.</p>
+          <a href="#">Selengkapnya &rarr;</a>
+        </div>
+      </div>
+      <div class="konsentrasi-card">
+        <div class="konsentrasi-top">
+          <i class="fas fa-robot"></i>
+          <h4>Kecerdasan Buatan &amp; Data Science</h4>
+        </div>
+        <div class="konsentrasi-body">
+          <p>Mahasiswa akan mempelajari algoritma machine learning, deep learning, natural language processing, dan teknik analisis data besar untuk membangun sistem cerdas yang mampu mengambil keputusan secara otomatis.</p>
+          <a href="#">Selengkapnya &rarr;</a>
+        </div>
+      </div>
+      <div class="konsentrasi-card">
+        <div class="konsentrasi-top">
+          <i class="fas fa-lock"></i>
+          <h4>Keamanan Sistem &amp; Jaringan</h4>
+        </div>
+        <div class="konsentrasi-body">
+          <p>Fokus pada penguasaan teknik keamanan siber, ethical hacking, forensik digital, kriptografi, dan manajemen keamanan jaringan untuk melindungi aset digital perusahaan dari berbagai ancaman siber.</p>
+          <a href="#">Selengkapnya &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-section">
+  <div class="container">
+    <h3>Trusted by our partners</h3>
+    <div class="partners-track-outer">
+      <div class="partners-track" id="partnerTrack">
+        <div class="partner-logo">PT Telkom Indonesia</div>
+        <div class="partner-logo">Gojek Technology</div>
+        <div class="partner-logo">Tokopedia</div>
+        <div class="partner-logo">Bukalapak</div>
+        <div class="partner-logo">Traveloka</div>
+        <div class="partner-logo">Bank BCA</div>
+        <div class="partner-logo">PT Indosat</div>
+        <div class="partner-logo">Grab Indonesia</div>
+        <div class="partner-logo">PT Telkom Indonesia</div>
+        <div class="partner-logo">Gojek Technology</div>
+        <div class="partner-logo">Tokopedia</div>
+        <div class="partner-logo">Bukalapak</div>
+        <div class="partner-logo">Traveloka</div>
+        <div class="partner-logo">Bank BCA</div>
+        <div class="partner-logo">PT Indosat</div>
+        <div class="partner-logo">Grab Indonesia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOSEN -->
+<section class="section" id="dosen">
+  <div class="container">
+    <div class="section-header">
+      <h2>Tenaga <span>Pengajar</span></h2>
+      <div class="divider"></div>
+      <p>Dosen Teknik Informatika FTIK Global Institute merupakan kombinasi akademisi dan praktisi berpengalaman dari industri teknologi terkemuka.</p>
+    </div>
+    <div class="dosen-grid">
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Agustinus Sirumapea, S.P., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+          <!-- <div class="keahlian">AI &amp; Machine Learning</div> -->
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Antonius Kiritin Kunto Darsono, S.Sos., M.Si., Ph.D.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Detin Sofia, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Eka Uliyanti Putri Br Bangun, S.Pd., M.Li.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Ferawati, S.Pd., M.Pd.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Fiqih Hana Saputri, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Dr. Jarudin, S.Pd., M.Pd., M.M.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Lilis Stianingsih, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>M. Bucci Ryando, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Dr. M. Ramaddan Julianti, M.T.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Makmun ZA, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Moh Rizqy Umar, S.Kom., M.M.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Moh Sofjan, S.T., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Muhammad Iqbal Hanafri, S.Pi., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Neng Linda Badratul Laela, S.Pd.I., M.Pd.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Nova Teguh Sunggono, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Nunung Nurmaesah, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Pramana Anwas Panchadria, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Ronal Yulyanto Suladi, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Rudi Setiyanto, S.Kom., M.Kom.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Dr. Rudy Sunardi, S.Kom., M.T.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Santoso, S.S., S.T., S.Kom., M.M.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Siti Maisaroh, S.S., M.Pd.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+      <div class="dosen-card">
+        <div class="dosen-photo"><i class="fas fa-user-tie"></i></div>
+        <div class="dosen-info">
+          <h5>Sutoto, B.Eng., M.T.I.</h5>
+          <div class="jabatan">Dosen Program Studi</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <div class="divider"></div>
+      <p>Pertanyaan yang sering diajukan seputar Program Studi Teknik Informatika FTIK Global Institute.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Apa saja syarat pendaftaran Program Studi Teknik Informatika? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Syarat pendaftaran meliputi: ijazah SMA/SMK/sederajat, pas foto terbaru, KTP/KK, dan mengisi formulir pendaftaran online. Tidak ada persyaratan jurusan SMA tertentu – semua latar belakang disambut.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Berapa lama masa studi di Teknik Informatika? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Masa studi normal adalah 8 semester (4 tahun), namun mahasiswa berprestasi dapat menyelesaikan dalam 7 semester (3,5 tahun). Program studi kami juga menyediakan jalur percepatan kelulusan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apakah tersedia program beasiswa? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Ya, tersedia berbagai program beasiswa antara lain: beasiswa prestasi akademik, beasiswa mahasiswa tidak mampu, beasiswa KIP-Kuliah dari pemerintah, serta beasiswa dari mitra industri yang bekerja sama dengan Global Institute.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apakah ada program magang di industri? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Tentu. Program Studi Teknik Informatika memiliki kemitraan aktif dengan 100+ perusahaan teknologi. Magang industri terintegrasi dalam kurikulum pada semester 6-7 dan difasilitasi oleh tim career center kami.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Bagaimana metode pembelajaran di Program Studi Teknik Informatika? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Pembelajaran menggunakan metode project-based learning, case study industri, praktikum laboratorium, serta kuliah tamu dari praktisi teknologi terkemuka. Tersedia juga pilihan kelas reguler dan kelas karyawan untuk fleksibilitas belajar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Apa saja fasilitas laboratorium yang tersedia? <i class="fas fa-chevron-down"></i></div>
+        <div class="faq-a">Fasilitas meliputi: Lab Pemrograman berkapasitas 40 unit PC, Lab Jaringan &amp; Keamanan Siber, Lab AI &amp; Data Science, studio multimedia, perpustakaan digital, serta akses ke platform cloud komputasi untuk praktikum.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PENDAFTARAN -->
+<section class="daftar-section" id="daftar">
+  <div class="daftar-inner">
+    <h2>Bergabunglah Bersama Kami</h2>
+    <p>Mulai perjalanan akademikmu di Program Studi Teknik Informatika FTIK Global Institute. Pendaftaran mahasiswa baru dibuka setiap semester. Raih masa depan cemerlang di dunia teknologi bersama kami.</p>
+    <div class="steps-row">
+      <div class="step-box">
+        <span class="step-num">01</span>
+        <p>Isi formulir pendaftaran online di website Global Institute</p>
+      </div>
+      <div class="step-box">
+        <span class="step-num">02</span>
+        <p>Lengkapi berkas persyaratan yang dibutuhkan</p>
+      </div>
+      <div class="step-box">
+        <span class="step-num">03</span>
+        <p>Ikuti tes seleksi masuk dan wawancara</p>
+      </div>
+      <div class="step-box">
+        <span class="step-num">04</span>
+        <p>Selesaikan pembayaran dan mulai kuliah</p>
+      </div>
+    </div>
+    <a href="#kontak" class="btn-white">Hubungi Kami Sekarang</a>
+  </div>
+</section>
+
+<!-- KONTAK -->
+<section class="section" id="kontak">
+  <div class="container">
+    <div class="section-header">
+      <h2>Contact <span>Us</span></h2>
+      <div class="divider"></div>
+      <p>Hubungi tim kami untuk informasi lebih lanjut seputar Program Studi Teknik Informatika FTIK Global Institute.</p>
+    </div>
+    <div class="kontak-grid">
+      <div class="kontak-info">
+        <h3>Informasi Kontak</h3>
+        <div class="k-item">
+          <div class="k-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="k-text">
+            <strong>Alamat Kampus</strong>
+            <span>Jl. Aria Santika No. 43A RT 003 RW 03,<br>Margasari, Karawaci, Kota Tangerang,<br>Banten 15114</span>
+          </div>
+        </div>
+        <div class="k-item">
+          <div class="k-icon"><i class="fas fa-phone"></i></div>
+          <div class="k-text">
+            <strong>Telepon</strong>
+            <span>+62 21 55791750</span>
+          </div>
+        </div>
+        <div class="k-item">
+          <div class="k-icon"><i class="fas fa-envelope"></i></div>
+          <div class="k-text">
+            <strong>Email</strong>
+            <span>ftik@global.ac.id<br>kampus@global.ac.id</span>
+          </div>
+        </div>
+        <div class="k-item">
+          <div class="k-icon"><i class="fas fa-clock"></i></div>
+          <div class="k-text">
+            <strong>Jam Operasional</strong>
+            <span>Senin &ndash; Jumat: 08.00 &ndash; 17.00 WIB<br>Sabtu: 08.00 &ndash; 13.00 WIB</span>
+          </div>
+        </div>
+      </div>
+      <div class="kontak-form">
+        <h3>Kirim Pesan</h3>
+        <div class="form-2col">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" placeholder="Nama Anda">
+          </div>
+          <div class="form-group">
+            <label>No. Handphone</label>
+            <input type="text" placeholder="+62 8xx xxxx xxxx">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="email@contoh.com">
+        </div>
+        <div class="form-group">
+          <label>Asal Sekolah / Instansi</label>
+          <input type="text" placeholder="Nama sekolah atau instansi Anda">
+        </div>
+        <div class="form-group">
+          <label>Konsentrasi yang Diminati</label>
+          <select>
+            <option value="">-- Pilih Konsentrasi --</option>
+            <option>Rekayasa Perangkat Lunak</option>
+            <option>Kecerdasan Buatan &amp; Data Science</option>
+            <option>Keamanan Sistem &amp; Jaringan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Pesan / Pertanyaan</label>
+          <textarea placeholder="Tulis pesan atau pertanyaan Anda di sini..."></textarea>
+        </div>
+        <button class="btn-red" style="width:100%;padding:13px;font-size:14px;" onclick="submitForm(event)">Kirim Pesan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="img/logo-global.jpeg" alt="Global Institute">
+      <p>Program Studi Teknik Informatika FTIK Global Institute berkomitmen mencetak lulusan profesional di bidang teknologi informasi yang berdaya saing global.</p>
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Need Help?</h5>
+      <ul>
+        <li><a href="#">Marketing Division</a></li>
+        <li><a href="#">Presenter Team</a></li>
+        <li><a href="#">Lecturer Staff</a></li>
+        <li><a href="#">Customer Service</a></li>
+        <li><a href="#kontak">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Learn More</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Innovation Center</a></li>
+        <li><a href="#">Quality Assurance</a></li>
+        <li><a href="#">KabarGlobal.com</a></li>
+        <li><a href="#">Scientific Journals</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <div class="footer-address">
+        Jl. Aria Santika No. 43 A RT 003 RW 03,<br>
+        Margasari, Karawaci,<br>
+        Kota Tangerang, Banten 15114
+      </div>
+      <div class="footer-address">
+        <a href="mailto:kampus@global.ac.id">kampus@global.ac.id</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Teknik Informatika &mdash; FTIK Global Institute. All rights reserved.</span>
+    <span>Global Institute of Technology &amp; Business &mdash; <span>Think Smartly &amp; Globally</span></span>
+  </div>
+</footer>
+
+<script>
+// ── Inject images ──
+const LOGO_B64 = 'img/logo-global.jpeg';
+const BANNER_B64 = 'img/banner-ftik.png';
+document.getElementById('navLogo').src = 'data:image/jpeg;base64,' + LOGO_B64;
+document.getElementById('footerLogo').src = 'data:image/jpeg;base64,' + LOGO_B64;
+document.getElementById('bannerImg').src = 'data:image/png;base64,' + BANNER_B64;
+document.getElementById('aboutImg').src = 'data:image/png;base64,' + BANNER_B64;
+document.getElementById('heroBg').style.backgroundImage = 'url(data:image/png;base64,' + BANNER_B64 + ')';
+
+// ── Mobile nav ──
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+function closeMob() { mobileNav.classList.remove('open'); }
+
+// ── FAQ accordion ──
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ── Form submit ──
+function submitForm(e) {
+  const btn = e.target;
+  btn.textContent = 'Pesan Berhasil Terkirim!';
+  btn.style.background = '#16a34a';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Kirim Pesan';
+    btn.style.background = '';
+    btn.disabled = false;
+  }, 3000);
+}
+
+// ── Active nav on scroll ──
+const sections = document.querySelectorAll('section[id], div[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 90) current = s.id;
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
